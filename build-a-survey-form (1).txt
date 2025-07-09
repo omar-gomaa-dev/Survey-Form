@@ -1,0 +1,124 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>freeCodeCamp Survey Form</title>
+  
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form"  method="post" action='https://register-demo.freecodecamp.org'>
+     
+        <label id="name-label" for="name">Name <input id="name" name="name" placeholder="name"  type="text" required /></label>
+       
+        <label  id="email-label" for="email"> Email: <input id="email" name="email" placeholder="email" type="email" required /></label>
+        <label  id="survey-form" for="age">Age<input id="number" name="age" type="number" placeholder="number" min="10" max="99" /></label>
+     
+     
+        <label  id="number-label" for="role">Which option best describes your current role?</label>
+ 
+    <select id="dropdown" name="role" required>
+    <option value="">Select current role</option>
+    <option value="student">Student</option>
+    <option value="job">Full Time Job</option>
+    <option value="learner">Full Time Learner</option>
+    <option value="preferNo">Prefer not to say</option>
+    <option value="other">Other</option>
+   </select>
+   <label>Would you recommend freeCodeCamp to a friend?</label>
+
+   <label><input type="radio" name="recommend" value="definitely" checked /> Definitely</label>
+    <label><input type="radio" name="recommend" value="maybe" /> Maybe</label>
+    <label><input type="radio" name="recommend" value="not-sure" /> Not Sure</label>
+    <p>What is your favorite feature of freeCodeCamp?</p>
+    <select id="most-like" name="mostLike" class="form-control" required="">
+        <option disabled="" selected="" value="">Select an option</option>
+        <option value="challenges">Challenges</option>
+        <option value="projects">Projects</option>
+        <option value="community">Community</option>
+        <option value="openSource">Open Source</option>
+      </select>
+      <p>
+        What would you like to see improved?
+        <span class="clue">(Check all that apply)</span>
+      </p>
+      <input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox">
+      <label><input name="prefer" value="Back-end Projects" type="checkbox" class="input-checkbox">Back-end Projects</label>
+      <label><input name="prefer" value="Data Visualization" type="checkbox" class="input-checkbox">Data Visualization</label>
+      <label><input name="prefer" value="Challenges" type="checkbox" class="input-checkbox">Challenges</label>
+      <label><input name="prefer" value="Open Source Community" type="checkbox" class="input-checkbox">Open Source Community</label>
+      <label><input name="prefer" value="Gitter help rooms" type="checkbox" class="input-checkbox">Gitter help rooms</label>
+      <label><input name="prefer" value="Videos" type="checkbox" class="input-checkbox">Videos</label>
+      <label><input name="prefer" value="City Meetups" type="checkbox" class="input-checkbox">City Meetups</label>
+      <label><input name="prefer" value="Wiki" type="checkbox" class="input-checkbox">Wiki</label>
+      <label><input name="prefer" value="Forum" type="checkbox" class="input-checkbox">Forum</label>
+      <label><input name="prefer" value="Additional Courses" type="checkbox" class="input-checkbox">Additional Courses</label>
+      <p>Any comments or suggestions?</p>
+      <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+     
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+     
+     
+     
+     
+     
+      
+    </form>
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+    padding: 2em;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  form {
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  label {
+    display: block;
+    margin: 1em 0 0.3em;
+  }
+  input, select, textarea {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  input[type="submit"] {
+    margin: 1em auto;
+    width: min(100%, 300px);
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  input[type="file"] {
+    padding: 0.5em;
+  }
+
+** end of styles.css **
+
